@@ -1,0 +1,86 @@
+[gd_scene load_steps=12 format=3 uid="uid://bit1i4ewwej1d"]
+
+[ext_resource type="Script" path="res://addons/godot_gpt/examples/function/function_example.gd" id="1_a4do1"]
+[ext_resource type="PackedScene" uid="uid://di8cv15276ai6" path="res://addons/godot_gpt/examples/chat/chat_entry/chat_entry.tscn" id="2_8egmh"]
+[ext_resource type="PackedScene" uid="uid://db4dkaa7rodme" path="res://addons/godot_gpt/examples/common/prompt_input/prompt_input.tscn" id="2_wilmk"]
+[ext_resource type="Script" path="res://addons/godot_gpt/gpt_chat_request.gd" id="3_w1qu0"]
+[ext_resource type="Script" path="res://addons/godot_gpt/gpt_function_param.gd" id="4_0bk2s"]
+[ext_resource type="Script" path="res://addons/godot_gpt/gpt_function.gd" id="5_ghg4i"]
+
+[sub_resource type="Resource" id="Resource_4s071"]
+script = ExtResource("4_0bk2s")
+name = "from"
+type = 1
+arg_enum = []
+description = "The bucket number to take balls from."
+
+[sub_resource type="Resource" id="Resource_3g14d"]
+script = ExtResource("4_0bk2s")
+name = "to"
+type = 1
+arg_enum = []
+description = "The bucket number to deposit balls in."
+
+[sub_resource type="Resource" id="Resource_8x5ne"]
+script = ExtResource("4_0bk2s")
+name = "amnt"
+type = 1
+arg_enum = []
+description = "The amount of balls to transfer between buckets."
+
+[sub_resource type="Resource" id="Resource_myl8j"]
+script = ExtResource("4_0bk2s")
+name = "color"
+type = 0
+arg_enum = []
+description = "The color of balls to transfer. Valid values are \"Red\", \"Green\", and \"Blue\"."
+
+[sub_resource type="Resource" id="Resource_r3c4x"]
+script = ExtResource("5_ghg4i")
+name = "move_to_from_color"
+description = "Moves a certain amount of balls of a certain color from a source bucket to a destination bucket."
+parameters = Array[ExtResource("4_0bk2s")]([SubResource("Resource_4s071"), SubResource("Resource_3g14d"), SubResource("Resource_8x5ne"), SubResource("Resource_myl8j")])
+required_parameters = []
+
+[node name="function" type="Control" node_paths=PackedStringArray("gpt", "chat_history_scroll", "chat_history", "prompt_input")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_a4do1")
+api_key = "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"
+gpt = NodePath("GPTChatRequest")
+chat_history_scroll = NodePath("VBoxContainer/ScrollContainer")
+chat_history = NodePath("VBoxContainer/ScrollContainer/chat_history")
+prompt_input = NodePath("VBoxContainer/prompt_input")
+chat_entry_scene = ExtResource("2_8egmh")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="chat_history" type="VBoxContainer" parent="VBoxContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="prompt_input" parent="VBoxContainer" instance=ExtResource("2_wilmk")]
+layout_mode = 2
+
+[node name="GPTChatRequest" type="HTTPRequest" parent="."]
+script = ExtResource("3_w1qu0")
+functions = Array[ExtResource("5_ghg4i")]([SubResource("Resource_r3c4x")])
