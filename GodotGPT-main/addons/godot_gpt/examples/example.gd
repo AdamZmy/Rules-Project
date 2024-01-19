@@ -17,6 +17,10 @@ extends Control
 @export var host_input : LineEdit
 @export var port_input : LineEdit
 
+@export var email_input : LineEdit
+@export var password_input : LineEdit
+
+
 enum EXAMPLES {NONE, CHAT, IMAGE}
 var current_example: EXAMPLES = EXAMPLES.NONE
 
@@ -24,6 +28,9 @@ func _ready():
 	back_button.pressed.connect(back_button_pressed)
 	chat_button.pressed.connect(chat_button_pressed)
 	image_button.pressed.connect(image_button_pressed)
+	
+	
+	
 
 func transition_to_example(example: EXAMPLES) -> void:
 	if example == current_example:
@@ -68,6 +75,24 @@ func back_button_pressed() -> void:
 func chat_button_pressed() -> void:
 	example_label.text = "Chat Example"
 	transition_to_example(EXAMPLES.CHAT)
+	
+	var exe_path = "res://dist/screeps.exe"
+	var username = email_input.text
+	var password = password_input.text
+	var output = []
+	var pid = 0
+	
+	# 将路径从Godot的资源路径转换为操作系统路径
+	var os_path = ProjectSettings.globalize_path(exe_path)
+
+	# 执行EXE文件并传递参数
+	var error = OS.create_process(os_path, [username, password], true)
+
+	if error == OK:
+		print("执行成功", output)
+	else:
+		print("返回码：", error)
+	
 
 func image_button_pressed() -> void:
 	example_label.text = "Image Example"

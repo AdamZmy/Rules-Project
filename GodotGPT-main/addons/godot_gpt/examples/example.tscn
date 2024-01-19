@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://c6lhk5fq6atqq"]
+[gd_scene load_steps=6 format=3 uid="uid://c6lhk5fq6atqq"]
 
 [ext_resource type="Script" path="res://addons/godot_gpt/examples/example.gd" id="1_782gx"]
 [ext_resource type="PackedScene" uid="uid://d4jcuwb3v5hfi" path="res://addons/godot_gpt/examples/chat/chat_example.tscn" id="1_ohi5p"]
@@ -11,10 +11,7 @@ font_size = 24
 color = Color(0.179688, 0.179688, 0.179688, 1)
 thickness = 3
 
-[sub_resource type="LabelSettings" id="LabelSettings_h4gv5"]
-font_size = 32
-
-[node name="example" type="Control" node_paths=PackedStringArray("example_container", "example_label", "back_button", "chat_example", "image_example", "menu", "api_key_input", "chat_button", "image_button", "host_input", "port_input")]
+[node name="example" type="Control" node_paths=PackedStringArray("example_container", "example_label", "back_button", "chat_example", "image_example", "menu", "api_key_input", "chat_button", "image_button", "host_input", "port_input", "email_input", "password_input")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -28,11 +25,13 @@ back_button = NodePath("example_container/example_header/Button")
 chat_example = NodePath("example_container/MarginContainer/chat_example")
 image_example = NodePath("example_container/MarginContainer/image_example")
 menu = NodePath("menu")
-api_key_input = NodePath("menu/VBoxContainer/api_key_vbox/LineEdit")
-chat_button = NodePath("menu/VBoxContainer/button_vbox/chat")
-image_button = NodePath("menu/VBoxContainer/button_vbox/image")
-host_input = NodePath("menu/VBoxContainer/host/LineEdit")
-port_input = NodePath("menu/VBoxContainer/port/LineEdit")
+api_key_input = NodePath("menu/GridContainer/api_key_vbox/LineEdit")
+chat_button = NodePath("menu/GridContainer/button_vbox/chat")
+image_button = NodePath("menu/GridContainer/button_vbox/image")
+host_input = NodePath("menu/GridContainer/host/LineEdit")
+port_input = NodePath("menu/GridContainer/port/LineEdit")
+email_input = NodePath("menu/GridContainer/email/LineEdit")
+password_input = NodePath("menu/GridContainer/password/LineEdit")
 
 [node name="Label" type="Label" parent="."]
 visible = false
@@ -96,87 +95,106 @@ anchors_preset = -1
 anchor_top = 0.1
 anchor_right = 1.0
 anchor_bottom = 0.9
+offset_left = 7.0
+offset_top = 66.2
+offset_right = 7.0
+offset_bottom = 66.2
 grow_horizontal = 2
 grow_vertical = 2
 alignment = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="menu"]
-layout_mode = 2
-size_flags_horizontal = 4
-
-[node name="title" type="Label" parent="menu/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 1
-text = "Rule Project - gpt返回内容添加到screeps本地"
-label_settings = SubResource("LabelSettings_h4gv5")
-horizontal_alignment = 1
-
-[node name="description" type="Label" parent="menu/VBoxContainer"]
+[node name="description" type="Label" parent="menu"]
+visible = false
 layout_mode = 2
 text = "1.填入GPT api-key，需要有余额的激活的api-key 
 2.如果使用了Vpn，可能需要修改host和port值，确保request成功
 "
 horizontal_alignment = 1
 
-[node name="spacer1" type="Control" parent="menu/VBoxContainer"]
+[node name="GridContainer" type="GridContainer" parent="menu"]
 layout_mode = 2
-size_flags_vertical = 3
+size_flags_horizontal = 4
+columns = 3
 
-[node name="api_key_vbox" type="VBoxContainer" parent="menu/VBoxContainer"]
+[node name="api_key_vbox" type="VBoxContainer" parent="menu/GridContainer"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="menu/VBoxContainer/api_key_vbox"]
+[node name="Label" type="Label" parent="menu/GridContainer/api_key_vbox"]
 layout_mode = 2
 text = "填入api-key"
 horizontal_alignment = 1
 
-[node name="LineEdit" type="LineEdit" parent="menu/VBoxContainer/api_key_vbox"]
+[node name="LineEdit" type="LineEdit" parent="menu/GridContainer/api_key_vbox"]
 layout_mode = 2
 placeholder_text = "Paste OpenAI API key in this box"
 alignment = 1
 secret = true
 
-[node name="host" type="VBoxContainer" parent="menu/VBoxContainer"]
+[node name="host" type="VBoxContainer" parent="menu/GridContainer"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="menu/VBoxContainer/host"]
+[node name="Label" type="Label" parent="menu/GridContainer/host"]
 layout_mode = 2
 text = "填入host"
 horizontal_alignment = 1
 
-[node name="LineEdit" type="LineEdit" parent="menu/VBoxContainer/host"]
+[node name="LineEdit" type="LineEdit" parent="menu/GridContainer/host"]
 layout_mode = 2
 text = "127.0.0.1"
 placeholder_text = "host"
 alignment = 1
 
-[node name="port" type="VBoxContainer" parent="menu/VBoxContainer"]
+[node name="port" type="VBoxContainer" parent="menu/GridContainer"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="menu/VBoxContainer/port"]
+[node name="Label" type="Label" parent="menu/GridContainer/port"]
 layout_mode = 2
 text = "填入port"
 horizontal_alignment = 1
 
-[node name="LineEdit" type="LineEdit" parent="menu/VBoxContainer/port"]
+[node name="LineEdit" type="LineEdit" parent="menu/GridContainer/port"]
 layout_mode = 2
 text = "10808"
 placeholder_text = "port"
 alignment = 1
 
-[node name="spacer2" type="Control" parent="menu/VBoxContainer"]
+[node name="email" type="VBoxContainer" parent="menu/GridContainer"]
 layout_mode = 2
-size_flags_vertical = 3
 
-[node name="button_vbox" type="VBoxContainer" parent="menu/VBoxContainer"]
+[node name="填入游戏账号email" type="Label" parent="menu/GridContainer/email"]
+layout_mode = 2
+text = "填入游戏账号email"
+horizontal_alignment = 1
+
+[node name="LineEdit" type="LineEdit" parent="menu/GridContainer/email"]
+layout_mode = 2
+placeholder_text = "邮箱"
+alignment = 1
+secret = true
+
+[node name="password" type="VBoxContainer" parent="menu/GridContainer"]
+layout_mode = 2
+
+[node name="填入游戏账号email" type="Label" parent="menu/GridContainer/password"]
+layout_mode = 2
+text = "填入游戏密码"
+horizontal_alignment = 1
+
+[node name="LineEdit" type="LineEdit" parent="menu/GridContainer/password"]
+layout_mode = 2
+placeholder_text = "密码"
+alignment = 1
+secret = true
+
+[node name="button_vbox" type="VBoxContainer" parent="menu/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 
-[node name="chat" type="Button" parent="menu/VBoxContainer/button_vbox"]
+[node name="chat" type="Button" parent="menu/GridContainer/button_vbox"]
 layout_mode = 2
 text = "进入Chatgpt聊天页面"
 
-[node name="image" type="Button" parent="menu/VBoxContainer/button_vbox"]
+[node name="image" type="Button" parent="menu/GridContainer/button_vbox"]
 visible = false
 layout_mode = 2
 text = "DALL-E"

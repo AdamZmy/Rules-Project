@@ -26,6 +26,11 @@ var port : int
 
 var last_response_text 
 
+var check_alert_cd = 60*2
+var _current_check_timer = 0 
+
+var _alerted = false
+
 # Function called when the node is added to the scene. Initializes various properties and connections.
 func _ready():
 	# Connect the signal from GPTChatRequest that is emitted when a request is completed.
@@ -109,3 +114,25 @@ func add_text_to_chat(from: String, text: String) -> void:
 func _on_button_pressed():
 	SaveLoadService.save(last_response_text, file_name.text)
 
+
+func _physics_process(delta):
+	_current_check_timer += 1
+	if _current_check_timer == check_alert_cd:
+		_current_check_timer = 0 
+		if does_alert_file_exist() and !_alerted:
+			_alerted = true
+#			var da = DirAccess.new()
+			add_text_to_chat("报错机器人", "发现线上的代码存在错误，是否辅助更正")
+			DirAccess.remove_absolute("alert.txt")
+			
+	
+func does_alert_file_exist() -> bool:
+
+	var file_name = "alert.txt"
+	var file_path = "res://" + file_name  # res:// 是Godot项目的根目录
+
+	# 检查文件是否存在
+	if FileAccess.file_exists(file_path):
+		return true
+	else:
+		return false
