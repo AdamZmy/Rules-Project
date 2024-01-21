@@ -1,0 +1,70 @@
+"D:\Alpha Coding\python3.11.5\python.exe" C:\Users\17212\AppData\Local\Screeps\scripts\screeps.com\default\r-agent.py 
+```javascript
+module.exports.loop = function() {
+  const harvesters = _.filter(Game.creeps, (creep) => creep.memory.role === 'harvester');
+
+  if (harvesters.length < 2) {
+    const spawn = Game.spawns['Spawn1'];
+    const newName = 'Harvester' + Game.time;
+    if (spawn) {
+      const result = spawn.spawnCreep([WORK, CARRY, MOVE], newName, { memory: { role: 'harvester' } });
+      if (result === OK) {
+        console.log('Spawning new harvester: ' + newName);
+      }
+    }
+  }
+
+  for (const name in Game.creeps) {
+    const creep = Game.creeps[name];
+
+    if (creep.memory.role === 'harvester') {
+      if (creep.store.getFreeCapacity() > 0) {
+        const sources = creep.room.find(FIND_SOURCES);
+        if (creep.harvest(sources[0]) === ERR_NOT_IN_RANGE) {
+          creep.moveTo(sources[0]);
+        }
+      } else {
+        if (creep.transfer(Game.spawns['Spawn1'], RESOURCE_ENERGY) === ERR_NOT_IN_RANGE) {
+          creep.moveTo(Game.spawns['Spawn1']);
+        }
+      }
+    }
+  }
+}
+```
+将发送的消息内容：
+System: 我正在玩一款叫做'Screeps World' 的游戏，请根据我的需求写js代码。切记只回复代码内容module.exports.loop中代码内容，我需要直接粘贴代码，不要回复任何和代码无关的信息。
+
+User: 完成在module.exports.loop = function中完成以下内容：当开采者不足两个时，生成开采者。让开采者采集从最近能量点进行采集，并运回到基地。
+
+User: 我现在的代码是module.exports.loop = function() {
+  const harvesters = _.filter(Game.creeps, (creep) => creep.memory.role === 'harvester');
+
+  if (harvesters.length < 2) {
+    const spawn = Game.spawns['Spawn1'];
+    const newName = 'Harvester' + Game.time;
+    if (spawn.spawnCreep([WORK, CARRY, MOVE], newName, { memory: { role: 'harvester' } }) === OK) {
+      console.log('Spawning new harvester: ' + newName);
+    }
+  }
+
+  for (const name in Game.creeps) {
+    const creep = Game.creeps[name];
+
+    if (creep.memory.role === 'harvester') {
+      if (creep.store.getFreeCapacity() > 0) {
+        const sources = creep.room.find(FIND_SOURCES);
+        if (creep.harvest(sources[0]) === ERR_NOT_IN_RANGE) {
+          creep.moveTo(sources[0]);
+        }
+      } else {
+        if (creep.transfer(Game.spawns['Spawn1'], RESOURCE_ENERGY) === ERR_NOT_IN_RANGE) {
+          creep.moveTo(Game.spawns['Spawn1']);
+        }
+      }
+    }
+  }
+}，但我收到了console的报错提醒如下，请帮我更正：IT HAS ERROR: 'error'TypeError: Cannot read property 'spawnCreep' of undefined
+
+
+进程已结束，退出代码为 0
