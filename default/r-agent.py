@@ -1,6 +1,6 @@
 '''
 [HONGZHANG LIU 20240121]
-openai.api.key = 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
+openai.api.key = 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（该key已作废）
 ---
 prompt:
 我正在玩一款叫做screeps的游戏，帮我用js生成一段代码，完成在module.exports.loop = function中完成以下内容：当开采者不足两个时，生成开采者。让开采者采集从最近能量点进行采集，并运回到基地。注意只回复代码内容module.exports.loop中代码内容，我需要直接粘贴代码，不要回复任何和代码无关的信息。
