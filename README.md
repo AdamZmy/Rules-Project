@@ -27,8 +27,8 @@ Looking forward to seeing you there! 🎉
 Contact Information
 If you have any questions or feedback about this project, please feel free to contact us. We highly appreciate your suggestions!
 
-Email: alpha.hz.liu@gmail.com
-GitHub Issues: For more technical inquiries, you can also create a new issue in our GitHub repository.
+- **Email:** alpha.hz.liu@gmail.com
+- **GitHub Issues:** For more technical inquiries, you can also create a new issue in our GitHub repository.
 We will respond to all questions quickly.
 
 ## 👨‍💻‍ Contributors
