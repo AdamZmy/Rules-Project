@@ -1,6 +1,6 @@
 # StratLingo AI：Dialogue-powered Behavior-Tree Strategy 
 <p align="center">
-<a href=""><img src="./logo.png" alt="MetaGPT logo: Enable GPT to work in software company, collaborating to tackle more complex tasks." width="150px"></a>
+<a href=""><img src="./logo.png" alt="MetaGPT logo: Enable GPT to work in software company, collaborating to tackle more complex tasks." width="300px"></a>
 </p>
 
 <p align="center">
