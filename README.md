@@ -15,19 +15,21 @@
 </p>
 
 ## 📖 Overview
+Developed behavior trees for game characters using large language models and API frameworks, tailored for open-source 
+sandbox RPG and SLG games.
 
 ## ✨️ Surpport
 Discard Join US
-📢 Join Our Discord Channel!
+📢 Join Our [Wechat Group]((https://github.com/Alphamasterliu/Rules-Project/blob/main/Wechat_Group.jpg)!
 
 Looking forward to seeing you there! 🎉
 
 Contact Information
 If you have any questions or feedback about this project, please feel free to contact us. We highly appreciate your suggestions!
 
-Email: alexanderwu@deepwisdom.ai
+Email: alpha.hz.liu@gmail.com
 GitHub Issues: For more technical inquiries, you can also create a new issue in our GitHub repository.
-We will respond to all questions within 2-3 business days.
+We will respond to all questions quickly.
 
 ## 👨‍💻‍ Contributors
 
