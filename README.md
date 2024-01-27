@@ -14,13 +14,20 @@
 <a href="http://www.apache.org/licenses/"><img src="https://img.shields.io/badge/License-Apache2.0-orange.svg" alt="License: Apache2.0"></a>
 </p>
 
-## 【愿景View】
-为玩家带来**极低门槛**，**超高自由度**的游戏体验。
+## 📖 Overview
 
+## ✨️ Surpport
+Discard Join US
+📢 Join Our Discord Channel!
 
-## 【产品路径】
-1. 基于开源沙盒RPG/SLG游戏，利用LLM和框架工具搭建自然语言定义游戏角色行为树的对话框插件。
-![Rules Concept](Rules_Concept.png)
+Looking forward to seeing you there! 🎉
+
+Contact Information
+If you have any questions or feedback about this project, please feel free to contact us. We highly appreciate your suggestions!
+
+Email: alexanderwu@deepwisdom.ai
+GitHub Issues: For more technical inquiries, you can also create a new issue in our GitHub repository.
+We will respond to all questions within 2-3 business days.
 
 ## 👨‍💻‍ Contributors
 
@@ -29,3 +36,8 @@
 </a>
 
 Made with [contrib.rocks](https://contrib.rocks).
+
+## ⚖️ License
+
+- Source Code Licensing: Our project's source code is licensed under the Apache 2.0 License. This license permits the use, modification, and distribution of the code, subject to certain conditions outlined in the Apache 2.0 License.
+- Data Licensing: The related data utilized in our project is licensed under CC BY-NC 4.0. This license explicitly permits non-commercial use of the data. We would like to emphasize that any models trained using these datasets should strictly adhere to the non-commercial usage restriction and should be employed exclusively for research purposes.
