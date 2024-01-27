@@ -10,7 +10,7 @@
 <p align="center">
 <a href="docs/README_CN.md"><img src="https://img.shields.io/badge/文档-中文版-blue.svg" alt="CN doc"></a>
 <a href="README.md"><img src="https://img.shields.io/badge/document-English-blue.svg" alt="EN doc"></a>
-<a href="https://github.com/AdamZmy/Rules-Project/blob/main/Wechat_Group.jpg"><img src="https://img.shields.io/badge/Wechat Group-微信测试群-green.svg" alt="Wechat Group"></a>
+<a href="https://github.com/AdamZmy/Rules-Project/blob/main/Wechat_Group.jpg"><img src="https://img.shields.io/badge/Wechat Group-微信测试群-#07C160.svg" alt="Wechat Group"></a>
 <a href="http://www.apache.org/licenses/"><img src="https://img.shields.io/badge/license-Apache2.0-orange.svg" alt="License: Apache2.0"></a>
 </p>
 
