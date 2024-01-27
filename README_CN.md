@@ -1,13 +1,41 @@
-# StratLingo AI
-Language based game unit control system
+# StratLingo AI：Dialogue-powered Behavior-Tree Strategy 
+<p align="center">
+<a href=""><img src="./logo.png" alt="MetaGPT logo: Enable GPT to work in software company, collaborating to tackle more complex tasks." width="300px"></a>
+</p>
 
-## 【愿景View】
-为玩家带来**极低门槛**，**超高自由度**的游戏体验。
+<p align="center">
+<b>基于自然语言交互的游戏角色行为自定义系统</b>
+</p>
 
-## 【产品目标】
-基于**自然语言交互**的游戏角色**行为自定义**系统。
+<p align="center">
+<a href="README.md"><img src="https://img.shields.io/badge/Document-English-blue.svg" alt="EN doc"></a>
+<a href="https://github.com/AdamZmy/Rules-Project/blob/main/Wechat_Group.jpg"><img src="https://img.shields.io/badge/Wechat Group-微信测试群-green.svg" alt="Wechat Group"></a>
+<a href="http://www.apache.org/licenses/"><img src="https://img.shields.io/badge/License-Apache2.0-orange.svg" alt="License: Apache2.0"></a>
+</p>
 
-## 【产品路径】
-1. 基于开源沙盒RPG/SLG游戏，利用LLM和框架工具搭建自然语言定义游戏角色行为树的对话框插件。
-![Rules Concept](Rules_Concept.png)
+## 📖 Overview
+使用大型语言模型和API框架，为游戏角色开发行为树。本软件专为开源沙盒 RPG 和 SLG 游戏量身定制，目前测试于Screeps World。
 
+## ✨️ 相关支持
+欢迎加入我们！
+📢 扫二维码进 [微信群](https://github.com/Alphamasterliu/Rules-Project/blob/main/Wechat_Group.jpg)!
+
+目前处于测试与优化阶段，非常期待您的关注! 🎉
+
+联系方式
+如果您有任何问题或者建议，欢迎你随时提出。我们会积极考虑采纳所有的宝贵提议，方式如下：
+- **电子邮箱:** alpha.hz.liu@gmail.com
+- **GitHub提问区:** 如需更多技术咨询，您也可以在我们的 GitHub 代码库中创建一个新问题。我们将尽可能快地回复所有问题。
+
+## 👨‍💻‍ 贡献者
+
+<a href="https://github.com/AdamZmy/Rules-Project/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=AdamZmy/Rules-Project" />
+</a>
+
+Made with [contrib.rocks](https://contrib.rocks).
+
+## ⚖️ 许可证
+
+- 源代码许可： 我们项目的源代码采用 Apache 2.0 许可。该许可允许使用、修改和分发代码，但须遵守 Apache 2.0 许可中列出的某些条件。
+- 数据许可： 我们项目中使用的相关数据采用 CC BY-NC 4.0 许可。该许可明确允许对数据进行非商业性使用。我们想强调的是，任何使用这些数据集训练的模型都应严格遵守非商业使用限制，并应仅用于研究目的。
