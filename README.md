@@ -20,3 +20,10 @@
 1. 基于开源沙盒RPG/SLG游戏，利用LLM和框架工具搭建自然语言定义游戏角色行为树的对话框插件。
 ![Rules Concept](Rules_Concept.png)
 
+## 👨‍💻‍ Contributors
+
+<a href="https://github.com/OpenBMB/ChatDev/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=OpenBMB/ChatDev" />
+</a>
+
+Made with [contrib.rocks](https://contrib.rocks).
