@@ -1,4 +1,4 @@
-# Rules-Agent
+# StratLingo AI
 Language based game unit control system
 
 ## 【愿景View】
