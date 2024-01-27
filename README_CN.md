@@ -17,12 +17,14 @@
 使用大型语言模型和API框架，为游戏角色开发行为树。本软件专为开源沙盒 RPG 和 SLG 游戏量身定制，目前测试于Screeps World。
 
 ## ✨️ 相关支持
-欢迎加入我们！
-📢 扫二维码进 [微信群](https://github.com/Alphamasterliu/Rules-Project/blob/main/Wechat_Group.jpg)!
+欢迎加入我们 ：）
+
+📢 扫二维码进[微信群](https://github.com/Alphamasterliu/Rules-Project/blob/main/Wechat_Group.jpg)!
 
 目前处于测试与优化阶段，非常期待您的关注! 🎉
 
 联系方式
+
 如果您有任何问题或者建议，欢迎你随时提出。我们会积极考虑采纳所有的宝贵提议，方式如下：
 - **电子邮箱:** alpha.hz.liu@gmail.com
 - **GitHub提问区:** 如需更多技术咨询，您也可以在我们的 GitHub 代码库中创建一个新问题。我们将尽可能快地回复所有问题。
