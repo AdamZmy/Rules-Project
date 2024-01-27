@@ -20,7 +20,7 @@ sandbox RPG and SLG games.
 
 ## ✨️ Surpport
 Discard Join US
-📢 Join Our [Wechat Group]((https://github.com/Alphamasterliu/Rules-Project/blob/main/Wechat_Group.jpg)!
+📢 Join Our [Wechat Group](https://github.com/Alphamasterliu/Rules-Project/blob/main/Wechat_Group.jpg)!
 
 Looking forward to seeing you there! 🎉
 
