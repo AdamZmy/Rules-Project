@@ -35,7 +35,7 @@ StratLingo AI使用大型语言模型和API框架，为游戏角色开发行为�
   <img src="https://contrib.rocks/image?repo=AdamZmy/Rules-Project" />
 </a>
 
-Made with [contrib.rocks](https://contrib.rocks).
+名单由[contrib.rocks](https://contrib.rocks)自动生成
 
 ## ⚖️ 许可证
 
