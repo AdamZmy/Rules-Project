@@ -10,6 +10,7 @@
 <p align="center">
 <a href="docs/README_CN.md"><img src="https://img.shields.io/badge/文档-中文版-blue.svg" alt="CN doc"></a>
 <a href="README.md"><img src="https://img.shields.io/badge/document-English-blue.svg" alt="EN doc"></a>
+<a href="http://www.apache.org/licenses/"><img src="https://img.shields.io/badge/license-Apache2.0-blue.svg" alt="License: Apache2.0"></a>
 </p>
 
 ## 【愿景View】
