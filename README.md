@@ -22,8 +22,8 @@
 
 ## 👨‍💻‍ Contributors
 
-<a href="https://github.com/OpenBMB/ChatDev/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=OpenBMB/ChatDev" />
+<a href="https://github.com/AdamZmy/Rules-Project/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=AdamZmy/Rules-Project" />
 </a>
 
 Made with [contrib.rocks](https://contrib.rocks).
