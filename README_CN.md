@@ -13,8 +13,8 @@
 <a href="http://www.apache.org/licenses/"><img src="https://img.shields.io/badge/License-Apache2.0-orange.svg" alt="License: Apache2.0"></a>
 </p>
 
-## 📖 Overview
-使用大型语言模型和API框架，为游戏角色开发行为树。本软件专为开源沙盒 RPG 和 SLG 游戏量身定制，目前测试于Screeps World。
+## 📖 概览
+StratLingo AI使用大型语言模型和API框架，为游戏角色开发行为树。本软件专为开源沙盒 RPG 和 SLG 游戏量身定制，目前测试于Screeps World。
 
 ## ✨️ 相关支持
 欢迎加入我们 ：）
