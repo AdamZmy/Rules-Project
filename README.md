@@ -4,7 +4,7 @@
 </p>
 
 <p align="center">
-<b>基于自然语言交互的游戏角色行为自定义系统</b>
+<b>Game Character Behavior Customization System Based on Natural Language Interaction</b>
 </p>
 
 <p align="center">
