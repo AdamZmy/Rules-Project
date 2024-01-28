@@ -1,4 +1,4 @@
-# LingoStrat AI：Focused on Strategy Games with Language Interaction
+# LingoStrat AI：Focused on Strategy Games with Natural Language Interaction
 <p align="center">
 <a href=""><img src="./logo.png" alt="MetaGPT logo: Enable GPT to work in software company, collaborating to tackle more complex tasks." width="300px"></a>
 </p>
