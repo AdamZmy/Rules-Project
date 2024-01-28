@@ -1,4 +1,4 @@
-# 思策灵AI：对话驱动的行为树策略生成
+# 言策科技：专注自然语言交互策略游戏
 <p align="center">
 <a href=""><img src="./logo.png" alt="MetaGPT logo: Enable GPT to work in software company, collaborating to tackle more complex tasks." width="300px"></a>
 </p>
